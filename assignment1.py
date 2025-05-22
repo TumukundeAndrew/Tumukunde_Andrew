@@ -5,13 +5,15 @@ inventory = [
     ["O1ranges", 15]
 ]
 
+# display all products avilable in the inventory
 def display_inventory():
     print("\nCurrent Inventory:")
     print("------------------")
     for item in inventory:
         print(f"{item[0]} - Quantity: {item[1]}")
     print("------------------")
-
+    
+# update any product from the inventory by changing the quanttity
 def update_inventory():
     item_name = input("Enter item name to update: ").capitalize()
     found = False
@@ -25,6 +27,7 @@ def update_inventory():
     if not found:
         print(f"{item_name} not found in inventory.")
 
+# add another product to the inventory
 def add_item():
     item_name = input("Enter new item name: ").capitalize()
     quantity = int(input(f"Enter quantity for {item_name}: "))
